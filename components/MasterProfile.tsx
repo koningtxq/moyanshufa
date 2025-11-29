@@ -18,7 +18,7 @@ const MasterProfile: React.FC = () => {
             <img
               src="/images/master.jpg"
               alt="袁凯老师"
-              className="w-full h-full object-cover filter grayscale contrast-110"
+              className="w-full h-full object-cover"
             />
           </div>
           {/* Vertical Name Tag */}

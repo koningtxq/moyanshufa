@@ -9,34 +9,30 @@ const Contact: React.FC = () => {
         <section className="py-20 px-6 bg-paper-bg" id="contact">
             <SectionTitle title="联系我们" subtitle="CONTACT & LOCATION" />
 
-            <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8">
+            <div className="max-w-2xl mx-auto">
                 {/* Info Card */}
-                <div className="w-full md:w-1/3 space-y-8">
-                    <div className="bg-white p-6 shadow-sm border-l-4 border-seal-red">
-                        <div className="flex items-start gap-4 mb-4">
-                            <MapPin className="text-seal-red mt-1 shrink-0" size={20} />
-                            <div>
-                                <h4 className="font-serif font-bold text-ink-black mb-1">地址</h4>
+                <div className="w-full space-y-8">
+                    <div className="bg-white p-8 shadow-lg border-l-4 border-seal-red rounded-sm">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                            <div className="flex flex-col items-center text-center">
+                                <MapPin className="text-seal-red mb-3" size={32} />
+                                <h4 className="font-serif font-bold text-ink-black mb-2">地址</h4>
                                 <p className="text-sm text-stone-600 leading-relaxed">
                                     广东省深圳市宝安区<br />
-                                    沙井街道马安山社区<br />
-                                    安东尼澳实业有限公司
+                                    圣安东尼奥科技园<br />
+                                    墨颜书画工作室
                                 </p>
                             </div>
-                        </div>
-                        <div className="flex items-start gap-4 mb-4">
-                            <Phone className="text-seal-red mt-1 shrink-0" size={20} />
-                            <div>
-                                <h4 className="font-serif font-bold text-ink-black mb-1">电话</h4>
+                            <div className="flex flex-col items-center text-center">
+                                <Phone className="text-seal-red mb-3" size={32} />
+                                <h4 className="font-serif font-bold text-ink-black mb-2">电话</h4>
                                 <p className="text-sm text-stone-600">
-                                    138-xxxx-xxxx
+                                    13652361114
                                 </p>
                             </div>
-                        </div>
-                        <div className="flex items-start gap-4">
-                            <Clock className="text-seal-red mt-1 shrink-0" size={20} />
-                            <div>
-                                <h4 className="font-serif font-bold text-ink-black mb-1">营业时间</h4>
+                            <div className="flex flex-col items-center text-center">
+                                <Clock className="text-seal-red mb-3" size={32} />
+                                <h4 className="font-serif font-bold text-ink-black mb-2">营业时间</h4>
                                 <p className="text-sm text-stone-600">
                                     周二至周日<br />
                                     10:00 - 21:00
@@ -47,30 +43,10 @@ const Contact: React.FC = () => {
 
                     <button
                         onClick={() => setShowQR(true)}
-                        className="w-full py-3 bg-ink-black text-white font-serif tracking-widest hover:bg-stone-800 transition-colors"
+                        className="w-full py-4 bg-ink-black text-white font-serif text-lg tracking-widest hover:bg-stone-800 transition-colors shadow-md"
                     >
                         预约试听
                     </button>
-                </div>
-
-                {/* Map Embed */}
-                <div className="w-full md:w-2/3 h-64 md:h-auto min-h-[300px] bg-stone-200 relative overflow-hidden shadow-md">
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        frameBorder="0"
-                        scrolling="no"
-                        marginHeight={0}
-                        marginWidth={0}
-                        src="https://maps.google.com/maps?q=22.717801,113.818947&hl=zh-CN&z=17&output=embed"
-                        className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
-                        title="Studio Location"
-                    ></iframe>
-                    <div className="absolute bottom-4 right-4 pointer-events-none">
-                        <span className="bg-white/90 px-3 py-1 text-xs font-bold text-ink-black shadow-md backdrop-blur-sm border border-stone-200">
-                            墨颜书画院
-                        </span>
-                    </div>
                 </div>
             </div>
 
